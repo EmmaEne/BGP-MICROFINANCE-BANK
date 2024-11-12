@@ -1,0 +1,507 @@
+/* -yellow: #f2d84b;
+    --primary-core-blue: #0357ee;
+    --primary-dark-10: #0349c6;
+    --primary-dark-30: #022c77;
+    --primary-dark-blue: #031335;
+    --primary-light-blue: #b7cffa;
+    --primary-light-10: #3679f1;
+    --primary-light-40: #cfdffc;
+    --primary-light-50: #ecf2fe;
+    --dark-navy-dark-10: #081c48;
+    --dark-navy-dark-20: #030b1d;
+    --dark-navy-00: #092256;
+    --dark-navy-light-10: #3e588e;
+    --dark-navy-light-20: #8391af;
+    --dark-navy-light-30: #05112b;
+    --dark-navy-light-40: #c3c9d5;
+    --dark-navy-light-50: #f9fafb;
+    --secondary-dark-navy: #092256;
+    --secondary-light-blue: #c4e9fd;
+    --light-blue-00: #c4e9fd;
+    --light-blue-light-30: #edf8fe;
+    --light-blue-light-30: #e1f4fe;
+    --light-blue-light-40: #ebf8fe;
+    --light-blue-light-50: #f3fbff;
+    --light-grey-100: #dcdfe6;
+    --light-grey-10: #dcdfe638;
+    --text-secondary: #8490aa; */
+
+@font-face {
+    font-family: Poppins-bold;
+    src: url('/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-regular;
+    src: url('/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-medium;
+    src: url('/Poppins/Poppins-Medium.ttf');
+}
+
+* {
+    font-family: Poppins-regular;
+}
+
+h1 { 
+    font-family: Poppins-bold;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Poppins-medium;
+}
+
+#root {
+    background: linear-gradient(180deg, #b0d7cb 0%, #e4fef8 90%, #ddfbe4 100%);
+    padding-bottom: 10px;
+}
+
+body {
+    background: red;
+}
+
+nav {
+    color: #ecf2fe;
+}
+
+.navbar-brand {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    top: 19px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: normal !important;
+}
+
+#collapsibleNavbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background: #017641 !important;
+    color: white !important;
+}
+
+.hero-section, nav {
+    background: #005f5a !important;
+}
+
+.hero-section, .about {
+    padding: 3% 5%;
+
+}
+
+.hero-section {
+    margin-top: 71px;
+    height: 650px;
+    position: relative;
+    overflow: hidden; 
+    border-bottom-right-radius: 100% 100px;
+    border-bottom-left-radius: 100% 100px;
+    color: #ecf2fe;
+}
+
+.hero-section .row {
+    position: relative;
+    z-index: 1; 
+}
+
+
+.hero-section .rounded-pill {
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(223, 239, 255, 0.2);
+    backdrop-filter: blur(60px);
+}
+
+.rounded-pill, .text p {
+    margin-bottom: 30px;
+}
+
+.text p {
+    margin-top: 20px;
+}
+
+.rounded-pill span {
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    padding-top: 9%;
+}
+
+.image {
+    width: 50% !important;
+    height: 500px !important;
+}
+
+.imagebox {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+}
+
+#secondImg {
+    width: 100%;
+    height: 100%;
+}
+
+section.about {
+    padding-top: 5%;
+}
+
+.about h1, .about h2, .about h3, .about h4 {
+    color: #004643;
+}
+
+.about span, .about p {
+    color: #004643;
+}
+
+.items div {
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+    width: 49%;
+    height: 350px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: 280px; /* Set the size of the background image */
+    background-position: bottom right; /* Position the image at the bottom right */
+}
+
+.items div a {
+    color: #02ad60;
+}
+
+
+.first-level {
+    position: relative;
+    top: 30px;
+}
+
+.trusted, .video {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.trusted h1 {
+    color: #011339;
+    font-family: poppins-regular;
+    text-align: center;
+}
+
+.trusted h1 span {
+    color: #017641;
+}
+
+.trusted .parent-cont {
+    background: #f5f9fc;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.child-cont {
+    display: flex;
+    padding: 10px;
+}
+
+.child-cont div {
+    margin-left: 10px;
+}
+
+.video {
+    height: 500px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    background-color: #011c03;
+}
+
+.investors {
+    background: #f5f9fc;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.investors .start {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.investors .start p {
+    width: 50%;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    animation: scroll 30s ease-in-out infinite;
+}
+
+.logos {
+    flex-shrink: 0;
+    width: 150px;
+    height: 75px;
+    margin: 0 10px;
+}
+
+.blank{
+    background: white;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+
+
+.join-us {
+    background: #004636 !important;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.join-us div {
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    bottom: 130px;
+    z-index: 1;
+}
+
+.join-us div h3 {
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.join-us div .joinImg {
+    width: 99%;
+    height: 310px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translatex(10%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+footer {
+    background: #023633 !important;
+    color: #ecf2fe;
+    padding-top: 70px;
+    padding-left: 20px;
+}
+
+.moniepoint {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.download, .secondBar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secondBar {
+    justify-content: end;
+    padding-right: 50px;
+    margin-top: 8%;
+}
+
+.apple, .playstore {
+    display: flex;
+    margin-left: 25px;
+    background: black;
+    width: 32%;
+    padding-top: 1px;
+}
+
+.getIt p {
+    position: relative;
+    top: 15px;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.firstBar {
+    display: flex;
+}
+
+.footerAbout #description {
+    width: 58%;
+    text-align: left;
+}
+
+.links
+
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 30px #011339; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0e46bf;
+    border-radius: 10px; 
+    min-height: 10px !important; 
+    height: 10px !important; 
+}
+
+@media screen and (max-width: 992px) {
+   .navbar-nav, .signup {
+        display: none !important;
+   }
+
+   .rounded-pill {
+        width: 75% !important;
+   }
+
+   .hero-section h1, .hero-section p {
+        width: 75%;
+   }
+
+   .hero-section {
+        height: 750px;
+   }
+
+   .image {
+        height: 500px !important;
+        margin: auto;
+    }
+
+    .imagebox {
+        width: 100%;
+    }
+
+    .items div {
+        width: 100%;
+    }
+
+    .items .first-level {
+        margin-bottom: 100px;
+    }
+
+    .trusted .parent-cont {
+        justify-content: start;
+    }
+
+    .blank {
+        height: 400px;
+    }
+
+    .join-us {
+        height: 900px;
+    }
+    
+    .join-us div {
+        bottom: 330px;
+        margin-left: 16px;
+        /* left: 10px; */
+        width: 700px ;
+        height: 500px auto;
+        margin-bottom: 20px;
+        
+    }
+
+    .joinImg {
+       height: 400px auto !important;
+    }
+
+    .firstBar ul {
+        width: 50%;
+        padding-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .hero-section h1, .hero-section p {
+        width: 100%;
+    }
+
+    .hero-section {
+        height: 500px;
+    }
+
+    .join-us {
+        margin: 0;
+        
+    }
+
+    .join-us div {
+        width: 100% !important;
+    }
+
+   .image {
+        display: none;
+    }
+
+    .items div {
+        height: 550px;
+    }
+
+    .footerAbout p {
+        width: 100% !important;
+    }
+
+    .download div {
+        width: 100%;
+        margin: 0;
+    }
+
+    .secondBar {
+        padding: 0;
+        justify-items: start;
+    }
+
+    .secondBar ul{
+        /* width: 500px; */
+        padding: 0;
+    }
+}
