@@ -54,51 +54,38 @@ h2, h3, h4, h5, h6 {
 }
 
 #root {
-    background: linear-gradient(180deg, #b0d7cb 0%, #e4fef8 90%, #ddfbe4 100%);
-    padding-bottom: 10px;
-}
-
-body {
-    background: red;
+    background: linear-gradient(180deg, #b6def4 0%, #e4f8fe 90%, #c4e9fd 100%);
 }
 
 nav {
     color: #ecf2fe;
-}
-
-.navbar-brand {
-    width: 200px;
-    height: 60px;
-    position: relative;
-    top: 19px;
-    font-weight: bold;
-}
-
-.navbar-nav {
-    margin: auto;
-}
-
-.nav-item {
-    margin-left: 20px;
+    height: 71px;
 }
 
 .navbar-nav .nav-link {
     color: white;
-    font-weight: normal !important;
-}
-
-#collapsibleNavbar {
-    display: flex;
-    justify-content: space-between;
 }
 
 button {
-    background: #017641 !important;
-    color: white !important;
+    background: #b7cffa !important;
+    color: black !important;
+}
+
+.offcanvas-body {
+    height: 100%;
+    background-color: #031335;
+}
+
+.mobile.navbar-nav {
+    font-size: 22px;
+}
+
+.mobile.navbar-nav .nav-item {
+    margin-bottom: 20px;
 }
 
 .hero-section, nav {
-    background: #005f5a !important;
+    background: #031335 !important;
 }
 
 .hero-section, .about {
@@ -172,11 +159,11 @@ section.about {
 }
 
 .about h1, .about h2, .about h3, .about h4 {
-    color: #004643;
+    color: #051a47;
 }
 
 .about span, .about p {
-    color: #004643;
+    color: #4b4f56;
 }
 
 .items div {
@@ -192,7 +179,7 @@ section.about {
 }
 
 .items div a {
-    color: #02ad60;
+    color: #031335;
 }
 
 
@@ -213,7 +200,7 @@ section.about {
 }
 
 .trusted h1 span {
-    color: #017641;
+    color: #0b51e8;
 }
 
 .trusted .parent-cont {
@@ -242,7 +229,7 @@ section.about {
 video {
     width: 100%;
     height: 100%;
-    background-color: #011c03;
+    background-color: #031335;
 }
 
 .investors {
@@ -287,8 +274,8 @@ video {
 
 
 .join-us {
-    background: #004636 !important;
-    height: 400px;
+    background: #0b51e8 !important;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -311,8 +298,7 @@ video {
 }
 
 .join-us div .joinImg {
-    width: 99%;
-    height: 310px;
+    width: 100%;
 }
 
 @keyframes scroll {
@@ -328,7 +314,7 @@ video {
 }
 
 footer {
-    background: #023633 !important;
+    background: #011339 !important;
     color: #ecf2fe;
     padding-top: 70px;
     padding-left: 20px;
@@ -377,7 +363,14 @@ footer ul li {
     text-align: left;
 }
 
-.links
+.navbar-toggler, button.btn-close {
+    background: none !important;
+}
+
+button.btn-close {
+    color: #011339 !important;
+    /* background-color: #011339 !important; */
+}
 
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
@@ -395,7 +388,7 @@ footer ul li {
 }
 
 @media screen and (max-width: 992px) {
-   .navbar-nav, .signup {
+   .desktop.navbar-nav, .signup {
         display: none !important;
    }
 
@@ -417,7 +410,8 @@ footer ul li {
     }
 
     .imagebox {
-        width: 100%;
+        width: auto;
+        height: auto;
     }
 
     .items div {
@@ -430,6 +424,8 @@ footer ul li {
 
     .trusted .parent-cont {
         justify-content: start;
+        align-items: center;
+        height: 400px;
     }
 
     .blank {
@@ -437,13 +433,12 @@ footer ul li {
     }
 
     .join-us {
-        height: 900px;
+        height: 960px;
     }
     
     .join-us div {
         bottom: 330px;
         margin-left: 16px;
-        /* left: 10px; */
         width: 700px ;
         height: 500px auto;
         margin-bottom: 20px;
@@ -458,6 +453,16 @@ footer ul li {
         width: 50%;
         padding-top: 10%;
     }
+
+    .join-us button {
+        width: 30% !important;
+        text-align: left;
+    }
+
+    .secondBar ul {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 610px) {
@@ -465,17 +470,45 @@ footer ul li {
         width: 100%;
     }
 
+    .rounded-pill {
+        width: 100% !important;
+    }
+
     .hero-section {
         height: 500px;
     }
 
+    .about {
+        padding-top: 100px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .join-us {
         margin: 0;
-        
+        height: 550px;
+    }
+
+    .join-us button {
+        width: 50% !important;
+    }
+
+    .joinImg {
+        height: auto;
     }
 
     .join-us div {
         width: 100% !important;
+    }
+
+    .investors .start {
+        flex-direction: column;
+    }
+
+    .investors .start p {
+        width: 100%;
+        padding-bottom: 30px;
     }
 
    .image {
@@ -505,3 +538,17 @@ footer ul li {
         padding: 0;
     }
 }
+
+/* Hide the offcanvas by default on all screen sizes */
+.offcanvas {
+    display: none !important;
+  }
+  
+  /* Show the offcanvas only on smaller screens (when the navbar-toggler button is clicked) */
+  @media (max-width: 767px) {
+    .offcanvas {
+      display: block !important; /* Show offcanvas when mobile toggle button is clicked */
+    }
+  }
+  
+  
