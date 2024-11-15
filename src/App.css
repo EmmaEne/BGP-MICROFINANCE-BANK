@@ -209,7 +209,7 @@ section.about {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
 }
 
@@ -234,7 +234,7 @@ video {
 
 .investors {
     background: #f5f9fc;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 50px;
 }
 
@@ -285,7 +285,7 @@ video {
 
 .join-us div {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
     position: relative;
     bottom: 130px;
     z-index: 1;
@@ -325,16 +325,12 @@ footer {
     margin-bottom: 20px;
 }
 
-.download, .secondBar {
+.download{
     display: flex;
     flex-wrap: wrap;
 }
 
-.secondBar {
-    justify-content: end;
-    padding-right: 50px;
-    margin-top: 8%;
-}
+
 
 .apple, .playstore {
     display: flex;
@@ -382,7 +378,7 @@ button.btn-close {
 
 ::-webkit-scrollbar-thumb {
     background-color: #0e46bf;
-    border-radius: 10px; 
+    border-radius: 15px; 
     min-height: 10px !important; 
     height: 10px !important; 
 }
@@ -456,13 +452,9 @@ button.btn-close {
 
     .join-us button {
         width: 30% !important;
-        text-align: left;
+        text-align: center;
     }
 
-    .secondBar ul {
-        padding: 0;
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 610px) {
@@ -526,16 +518,6 @@ button.btn-close {
     .download div {
         width: 100%;
         margin: 0;
-    }
-
-    .secondBar {
-        padding: 0;
-        justify-items: start;
-    }
-
-    .secondBar ul{
-        /* width: 500px; */
-        padding: 0;
     }
 }
 

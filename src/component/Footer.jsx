@@ -53,20 +53,6 @@ function Footer() {
                     <li>IMC Policy</li>
                 </ul>
             </div>
-            <div className="secondBar">
-                <ul className="col-lg-2">
-                    <li>Solutions</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, doloribus.</li>
-                </ul>
-                <ul className="col-lg-2">
-                    <li>About us</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, doloribus.</li>
-                </ul>
-                <ul className="col-lg-3">
-                    <li>Resources</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, doloribus.</li>
-                </ul>
-            </div>
         </footer>
     </>
 }

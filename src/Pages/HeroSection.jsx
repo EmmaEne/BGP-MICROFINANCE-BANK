@@ -1,9 +1,9 @@
 import Header from "../component/Header"
+import BackToTop from "../component/BackToTop"
 import data from "../about"
 
 // importing images
 import global from "/images/gb.svg"
-import Lady from "/images/lady.jpg"
 import iconOne from "/images/pmt.svg"
 import iconTwo from "/images/tpv.svg"
 import iconThree from "/images/api.svg"
@@ -140,6 +140,7 @@ function HeroSection() {
       </section>
 
       <Footer />
+      <BackToTop />
     </>
   )
 }
