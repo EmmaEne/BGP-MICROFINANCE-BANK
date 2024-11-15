@@ -3,8 +3,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
-    color: white;
+    background: #7eb0fb !important;
     border: none;
     border-radius: 50%;
     padding: 10px;
@@ -24,7 +23,7 @@
   }
   
   .back-to-top:hover {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
   }
   
   .back-to-top:active {

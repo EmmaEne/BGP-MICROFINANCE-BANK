@@ -8,8 +8,8 @@ function Footer() {
             <div className="firstBar row container-fluid">
                 <div className="footerAbout col-lg-5">
                     {/* <img src={logo} className="moniepoint"/> */}
-                    <a href="#" style={{color: "white", marginBottom: "100px", textDecoration: "none", fontWeight: "bold"}}>BGP Micro-finance</a>
-                    <p id="description">BGP Micro-finance Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quod modi dolorum qui placeat, similique exercitationem perspiciatis alias sint, assumenda unde, numquam ratione itaque voluptatum dolores aperiam dolor earum possimus.</p>
+                    <a href="#" style={{color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px"}}>BGP Micro-finance</a>
+                    <p id="description" style={{marginTop: "15px"}}>BGP Micro-finance Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quod modi dolorum qui placeat, similique exercitationem perspiciatis alias sint, assumenda unde, numquam ratione itaque voluptatum dolores aperiam dolor earum possimus.</p>
                     <div className="download">
                         <div className="apple">
                             <img src={apple} />
