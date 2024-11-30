@@ -28,6 +28,8 @@ import "../App.css"
 // import components
 import Footer from "../component/Footer"
 
+import { useNavigate } from "react-router-dom";
+
 function HeroSection() {
   return (
     <>
