@@ -53,6 +53,10 @@ h2, h3, h4, h5, h6 {
     font-family: Poppins-medium;
 }
 
+p {
+    font-size: 18px;
+}
+
 #root {
     background: linear-gradient(180deg, #b6def4 0%, #e4f8fe 90%, #c4e9fd 100%);
 }
@@ -69,6 +73,20 @@ nav {
 button {
     background: #b7cffa !important;
     color: black !important;
+}
+
+button:hover {
+    background-color: #84affe !important;
+    scale: 1.1;
+}
+
+button:focus {
+    background-color: #2f57a1 !important;
+    color: white !important;
+}
+
+button:active {
+    background-color: #052577 !important;
 }
 
 .offcanvas-body {
@@ -88,26 +106,25 @@ button {
     background: #031335 !important;
 }
 
-.hero-section, .about {
+.hero-section, .offers {
     padding: 3% 5%;
-
 }
 
 .hero-section {
     margin-top: 71px;
-    height: 650px;
-    position: relative;
+    height: 580px;
     overflow: hidden; 
     border-bottom-right-radius: 100% 100px;
     border-bottom-left-radius: 100% 100px;
     color: #ecf2fe;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-section .row {
     position: relative;
     z-index: 1; 
 }
-
 
 .hero-section .rounded-pill {
     width: 400px;
@@ -117,8 +134,18 @@ button {
     backdrop-filter: blur(60px);
 }
 
+#heart {
+    width: 30px;
+    height: 30px;
+    color: #7386b0;
+}
+
 .rounded-pill, .text p {
     margin-bottom: 30px;
+}
+
+.text h1 {
+    font-size: 37px;
 }
 
 .text p {
@@ -154,15 +181,43 @@ button {
     height: 100%;
 }
 
-section.about {
+.about {
+    height: 500px;
+    background-color: #f3f9fd;
+    position: relative;
+    bottom: 50px;
+    display: block;
+}
+
+.about-text {
+    padding: 15% 5%;
+}
+
+.about-text p {
+    width: 78%;
+    margin-bottom: 10%;
+}
+
+.wave-div {
+    width: 100%;
+    height: 100px;
+    background-image: url("/images/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    bottom: 172px;
+}
+
+section.offers {
     padding-top: 5%;
 }
 
-.about h1, .about h2, .about h3, .about h4 {
+.offers h1, .offers h2, .offers h3, .offers h4, .about {
     color: #051a47;
 }
 
-.about span, .about p {
+.offers span, .offers p, .about-text p {
     color: #4b4f56;
 }
 
@@ -188,7 +243,11 @@ section.about {
     top: 30px;
 }
 
-.trusted, .video {
+.first-level.happy-woman {
+    background-size: 210px;
+}
+
+.trusted{
     padding-top: 60px;
     padding-bottom: 30px;
 }
@@ -205,9 +264,10 @@ section.about {
 
 .trusted .parent-cont {
     background: #f5f9fc;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     border-radius: 15px;
     padding: 20px;
@@ -216,20 +276,11 @@ section.about {
 .child-cont {
     display: flex;
     padding: 10px;
+    width: 30%;
 }
 
 .child-cont div {
     margin-left: 10px;
-}
-
-.video {
-    height: 500px;
-}
-
-video {
-    width: 100%;
-    height: 100%;
-    background-color: #031335;
 }
 
 .investors {
@@ -255,9 +306,12 @@ video {
 
 .carousel-wrapper {
     display: flex;
-    animation: scroll 30s ease-in-out infinite;
+    animation: scroll 20s ease-in-out infinite;
 }
 
+#assest {
+    width: 300px;
+}
 .logos {
     flex-shrink: 0;
     width: 150px;
@@ -469,7 +523,7 @@ button.btn-close {
         height: 500px;
     }
 
-    .about {
+    .offers {
         padding-top: 100px !important;
         display: flex;
         flex-direction: column;
@@ -532,4 +586,139 @@ button.btn-close {
     }
   }
   
+
+  /* about */
+
+.intro h2 {
+    color: #011339;
+}
+
+
+.intro, .others, .features, .properties {
+    padding: 100px 5%;
+}
   
+.intro, .others {
+    width: 100.7%;
+}
+
+.intro {
+    position: relative; /* Needed for the pseudo-element */
+    background: url("../public/images/moneyy.png") no-repeat;
+    background-color: rgba(245, 249, 252, 0.8); /* Background color with opacity */
+    padding-top: 160px;
+    background-position: right bottom;
+    background-size: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+@media only screen and (max-width: 610px) { 
+
+    .intro {
+        background-image: none;
+    }
+}
+
+.intro > * {
+    position: relative; /* Ensures child elements are above the overlay */
+    z-index: 1; /* Places content above the pseudo-element */
+}
+
+.intro button {
+    width: 200px;
+    height: 50px;
+}
+
+.others {
+    height: auto;
+    background-color: #0b51e8;
+    display: flex !important;
+    justify-content: center;
+    gap: 35px;
+}
+
+
+
+
+.features {
+    width: 550px !important;
+    width: 550px !important;
+    background-color: #f5f9fc;
+    border-radius: 15px;
+    padding-left: 30px !important;
+}
+
+.features p {
+    color: #4b4f56;
+}
+
+.properties {
+    background-color: #f5f9fc;
+}
+
+.the-offers {
+    width: 200px !important;
+    height: 50px;
+    margin-left: 10px;
+    background-color: #7386b0;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+}
+
+.top {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-color: #f5f9fc;
+    padding: 10% 5%;
+}
+
+.bottom {
+    position: relative;
+    bottom: 55px;
+    width: 100%;
+    height: 95vh;
+}
+
+.top h3, .user-form h5 {
+    color: #011339;
+}
+
+.top h3 {
+    text-align: center;
+}
+
+.contact-wave {
+    width: 100%;
+    height: 100px;
+    background-image: url("/images/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.user-form {
+    width: 43%;
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    background-color: #f5f9fc;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 #cbdfef, 0 2px 5px 0 rgba(200, 216, 249, 0.959);
+    padding: 3% 2%;
+    border-radius: 15px;
+}
+
+.user-form input, label, textarea, button {
+    margin-top: 10px !important;
+}
+
+.submit {
+    float: right;
+    margin-top: 50px !important;
+}

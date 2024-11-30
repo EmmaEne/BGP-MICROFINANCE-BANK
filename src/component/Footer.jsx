@@ -2,14 +2,16 @@ import logo from "/images/logo-icon-white.svg"
 import apple from "/images/apple.svg"
 import playstore from "/images/playstore.svg"
 
-function Footer() {
+function Footer(props) {
     return <>
         <footer>
             <div className="firstBar row container-fluid">
                 <div className="footerAbout col-lg-5">
                     {/* <img src={logo} className="moniepoint"/> */}
                     <a href="#" style={{color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px"}}>BGP Micro-finance</a>
-                    <p id="description" style={{marginTop: "15px"}}>BGP Micro-finance Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quod modi dolorum qui placeat, similique exercitationem perspiciatis alias sint, assumenda unde, numquam ratione itaque voluptatum dolores aperiam dolor earum possimus.</p>
+                    <p id="description" style={{marginTop: "15px"}}>
+                        {props.description}
+                    </p>
                     <div className="download">
                         <div className="apple">
                             <img src={apple} />
