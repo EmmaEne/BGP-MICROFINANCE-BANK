@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroSection from './Pages/HeroSection';
-import About from './Pages/about';
+import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Signup from './Pages/Signup';
 
