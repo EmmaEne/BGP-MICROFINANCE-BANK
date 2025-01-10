@@ -14,14 +14,15 @@ export const Container = styled.div`
   width: 80%;
   max-width: 100%;
   height: 400px; /* Adjust this if necessary */
-  margin: auto;
+  margin: 120px auto;
   padding: 50px;
 
   /* Mobile View */
   @media (max-width: 768px) {
+    background: transparent;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 100% !important;
     box-shadow: none;
     padding: 20px;
     margin: 0;

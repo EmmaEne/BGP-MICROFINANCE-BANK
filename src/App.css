@@ -57,7 +57,7 @@ p {
     font-size: 18px;
 }
 
-#root {
+body {
     background: linear-gradient(180deg, #b6def4 0%, #e4f8fe 90%, #c4e9fd 100%);
 }
 
@@ -207,6 +207,7 @@ button:active {
     background-position: center;
     position: relative;
     bottom: 172px;
+    z-index: 1;
 }
 
 section.offers {
@@ -451,7 +452,8 @@ button.btn-close {
 
    .hero-section {
         height: 750px;
-   }
+    }
+
 
    .image {
         height: 500px !important;
@@ -520,7 +522,17 @@ button.btn-close {
     }
 
     .hero-section {
-        height: 500px;
+        height: 600px;
+    }
+
+    .wave-div {
+        bottom: 9px;
+
+    }
+
+    .about {
+        padding-top: 100px;
+        height: 700px;
     }
 
     .offers {
@@ -572,6 +584,16 @@ button.btn-close {
         width: 100%;
         margin: 0;
     }
+
+    .parent-cont {
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    .child-cont {
+        width: 100%;
+        margin-bottom: 35px;
+    }
 }
 
 /* Hide the offcanvas by default on all screen sizes */
@@ -619,6 +641,15 @@ button.btn-close {
     .intro {
         background-image: none;
     }
+
+    .intro, .others {
+        justify-self: center;
+    }
+
+    .properties .the-offers {
+        width: 400px !important;
+    }
+
 }
 
 .intro > * {
@@ -632,7 +663,7 @@ button.btn-close {
 }
 
 .others {
-    height: auto;
+    height: 35%;
     background-color: #0b51e8;
     display: flex !important;
     justify-content: center;
@@ -640,11 +671,9 @@ button.btn-close {
 }
 
 
-
-
 .features {
-    width: 550px !important;
-    width: 550px !important;
+    width: 500px !important;
+    height: auto !important;
     background-color: #f5f9fc;
     border-radius: 15px;
     padding-left: 30px !important;
@@ -703,16 +732,54 @@ button.btn-close {
 }
 
 .user-form {
-    width: 43%;
+    width: 50%;
     position: absolute;
     top: 40%;
-    left: 28%;
+    left: 320px;
     background-color: #f5f9fc;
     z-index: 1;
     box-shadow: 0 4px 8px 0 #cbdfef, 0 2px 5px 0 rgba(200, 216, 249, 0.959);
     padding: 3% 2%;
     border-radius: 15px;
 }
+
+form h5 {
+    padding-top: 50px;
+    padding-left: 3px;
+}
+
+@media (max-width: 834px) {
+    .top {
+        padding-top: 150px;
+    }
+    .user-form {
+        width: 90% !important;
+        top: 300px;
+        left: 40px !important;
+    }
+    .top, .bottom {
+        height: 530px;
+    }
+}
+
+@media (max-width: 614px) {
+    .top {
+        height: 500px !important;
+    }
+
+    .bottom {
+        height: 500px !important;
+    }
+
+    .top h3 {
+        margin-top: 130px;
+    }
+
+    .user-form {
+        width: 90% !important;
+        left: 20px !important;
+    }
+  }
 
 .user-form input, label, textarea, button {
     margin-top: 10px !important;
