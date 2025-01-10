@@ -113,7 +113,7 @@ button:active {
 .hero-section {
     margin-top: 71px;
     height: 580px;
-    overflow: hidden; 
+    /* overflow: hidden;  */
     border-bottom-right-radius: 100% 100px;
     border-bottom-left-radius: 100% 100px;
     color: #ecf2fe;
@@ -633,7 +633,8 @@ button.btn-close {
     background-size: 300px;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* To contain the pseudo-element */
+    /* overflow: hidden; */
+     /* To contain the pseudo-element */
 }
 
 @media only screen and (max-width: 610px) { 
