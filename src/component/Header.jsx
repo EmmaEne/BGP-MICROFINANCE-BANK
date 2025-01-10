@@ -91,9 +91,9 @@ function Header() {
                   <li><a className="dropdown-item" href="#">A third link</a></li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link"
                   onClick={() => navigate("/about")}
                   role="button"
                 >
@@ -101,10 +101,10 @@ function Header() {
                 </a>
               </li>
               <li className="nav-item"><a className="nav-link" onClick={() => navigate("/about")}>About</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
+              <li className="nav-item"><a className="nav-link" href="#" onClick={() => navigate("/contact")}>Contact</a></li>
               <li className="nav-item">
                 <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" onClick={() => navigate("/signup")}>
-                  sign up
+                  Sign up
                 </a>
               </li>
             </ul>
