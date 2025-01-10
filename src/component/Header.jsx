@@ -42,8 +42,9 @@ function Header() {
               Inside BGP Micro-finance
             </a>
           </li>
-          <li className="nav-item"><a className="nav-link" onClick={() => navigate("/about")}>About</a></li>
-          <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
+          <li className="nav-item">
+            <a className="nav-link" onClick={() => navigate("/contact")}>Contact</a>
+            </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               Resources
