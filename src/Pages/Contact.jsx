@@ -20,7 +20,9 @@ function Contact() {
                 <input className="form-control" type="text" />
                 <label htmlFor="country">Country</label>
                 <input className="form-control" type="text" />
-                <label htmlFor="extra">Anything else:</label>
+                <label htmlFor="country">Phone Number</label>
+                <input className="form-control" type="text" />
+                <label htmlFor="extra">kindly drop a message:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                 <button className="btn submit">Submit</button>
             </form>

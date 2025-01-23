@@ -6,9 +6,12 @@ function Header() {
   const navigate = useNavigate();
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark fixed-top">
+    <nav className="navbar navbar-expand-sm navbar-dark fixed-top pe-5 ps-5">
       <div className="container-fluid mycontainer">
-        <a href="#" className="navbar-brand">BGP Micro-finance</a>
+        <a 
+         href="#"
+         onClick={() => navigate("/")}
+         className="navbar-brand">BGP Micro-finance</a>
       
         {/* Offcanvas Toggle Button (Visible on Mobile) */}
         <button
@@ -58,8 +61,8 @@ function Header() {
         </ul>
       
         {/* Signup Button (Visible on Desktop Only) */}
-        <div className="signup d-none d-sm-block">
-          <button className="btn" onClick={() => navigate("/signup")}>
+        <div className="d-none d-sm-block">
+          <button className="btn sign" onClick={() => navigate("/signup")}>
             Sign up
           </button>
         </div>
@@ -103,7 +106,7 @@ function Header() {
               </li>
               <li className="nav-item"><a className="nav-link" href="#" onClick={() => navigate("/contact")}>Contact</a></li>
               <li className="nav-item">
-                <a className="nav-link" href="#" role="button" data-bs-toggle="dropdown" onClick={() => navigate("/signup")}>
+                <a className="nav-link signin" href="#" role="button" data-bs-toggle="dropdown" onClick={() => navigate("/signup")}>
                   Sign up
                 </a>
               </li>

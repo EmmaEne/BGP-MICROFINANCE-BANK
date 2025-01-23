@@ -3,22 +3,17 @@ import BackToTop from "../component/BackToTop"
 import data from "../about"
 
 // importing images
-import heart from "/icons/heart.svg"
-import iconOne from "/images/pmt.svg"
-import iconTwo from "/images/tpv.svg"
-import iconThree from "/images/api.svg"
-import Tobi from "/images/maxresdefault.jpg"
-import logo1 from "/images/vee.png"
-import logo2 from "/images/errandpay-logos.png"
-import logo3 from "/images/asset-matrix.png"
-import logo4 from "/images/inv4.png"
-import logo5 from "/images/download.webp"
-import pos from "/images/patners.jpg"
-import dreamMaker from "/images/happy patners.jpg"
-import feat from "/images/feat1.png"
 
-// importing videos
-import newscast from "/videos/video 3.mp4"
+import logo1 from "/images/9psb-removebg-preview.png"
+import logo2 from "/images/ammfib-removebg-preview.png"
+import logo3 from "/images/fcmb-removebg-preview.png"
+import logo4 from "/images/vfd_mfi_b-removebg-preview.png"
+import logo5 from "/images/wirelesspay-removebg-preview.png"
+import pos from "/images/diverse-business-group-working-laptop.jpg"
+import dreamMaker from "/images/black-men-cafe-having-business.jpg"
+import feat from "/images/model4-removebg-preview.png"
+import model2 from "/images/model2-removebg-preview.png"
+import festivalModels from "/images/model1-removebg-preview.png"
 
 // importing fonts
 import rightarrow from "/icons/arrow-right.svg"
@@ -28,83 +23,117 @@ import "../App.css"
 // import components
 import Footer from "../component/Footer"
 
+const carouselItems = [
+  {
+    title: "Stay in control of your money with a BEST account.",
+    text: "Creating Financial Impact is our continual focus within the fintech microfinance Institution in Nigeria and across-board.",
+    image: feat,
+  },
+  {
+    title: "Bank smarter with innovative solutions.",
+    text: "Experience seamless transactions and financial growth with our cutting-edge banking technology.",
+    image: model2,
+  },
+  {
+    title: "Your future, your finances, our priority.",
+    text: "We are committed to providing financial solutions that secure your tomorrow, today.",
+    image: festivalModels,
+  }
+];
+
+
+const logos = [logo1, logo2, logo3, logo4, logo5];
+
 function HeroSection() {
   return (
     <>
       <Header />
       <section className="hero-section">
-        <div className="row">
-          <div className="text col-lg-6">
-            <div className="rounded-pill">
-             <img src={heart} id="heart"/>
-             <span>You made us to be here for you.</span>
-            </div>
-            <h1>Stay in control of your money with a BEST account.</h1>
-            <p>Creating Financial Impact is our continually focus within the fintech microfinance Institution in Nigeria and across-board.</p>
-            <button className="btn btn-lg ">Join us</button>
-          </div>
-          <div className="image col-lg-6">
-            <div className="imagebox">
-              <img src={feat} id="secondImg" />            
-            </div>
+        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div className="carousel-inner">
+            {carouselItems.map((item, index) => (
+              <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
+                <div className="row align-items-center">
+                  <div className="text col-lg-6">
+                    <div className="rounded-pill"></div>
+                    <div className="rounded-pill" style={{ width: "40%" }}>
+                    </div>
+                    <h1>{item.title}</h1>
+                    <p>{item.text}</p>
+                    <button className="btn btn-lg btn-primary rounded-pill" style={{width:"170px", height: "50px"}}>Join us</button>
+                  </div>
+                  <div className="image col-lg-6">
+                    <div className="imagebox">
+                      <img src={item.image} className="d-block w-100" alt="Feature" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
       <section className="about">
         <div className="about-text">
           <h3>About BGP Microfinance Bank</h3>
-          <p>BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. Its headquarters are located at 111 Calabar Road, Calabar South LGA, Cross River State. <br />
-          BEST is a fintech company on a mission to create financial services that are more accessible, affordable, and rewarding for everyone.</p>
+          <p className="w-50">BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. An upgraded liscence to best global payment, head office located at 111 calabar road, calabar south, LGA Cross river state.</p>
         </div>
         <div className="wave-div"></div>
       </section>
-      
+
       <section className="offers">
-        <div id="intro" className="col-lg-6">
-          <h2>Here are our BEST offers.</h2>
-          <p>Our Integrity 100%, Transparency 100%, Professionalism 100%, Customer Care Satifaction are guaranteed</p>
+        <div id="intro" className="col-lg-6 mb-5">
+          <h2>Here are our best offers.</h2>
         </div>
-        <div className="container-fluid row items">
-            {data.map((item)=>{
-                 return  <div
-                 key={item.id}
-                 className={item.className}
-                 style={{ backgroundImage: `url(${item.image})` }}
-                >
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <a href="#">{item.link}</a>
+        <div className="row d-flex justify-content-center">
+          {data.map((item) => (
+            <div key={item.id} className={item.className}>
+              <div className="card p-4" style={{ backgroundImage: `url(${item.image})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+                <div className="card-body">
+                  <h5 className="card-title">{item.title}</h5>
+                  <ul className="list-unstyled">
+                    {item.description.map((desc, index) => (
+                      <li key={index} className="d-flex align-items-center">
+                        <i className="fa fa-check text-success me-2"></i> {desc}
+                      </li>
+                    ))}
+                  </ul>
+                  {item.link ? <a href="#" className="btn btn-primary">{item.link}</a> : ""}
+
                 </div>
-            })}
-          </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className=""></section>
 
       <section className="trusted">
-        <h1>Trusted by <span>2,000,000+</span> businesses</h1>
+        <h1>Trusted by <span>2,000+</span> businesses</h1>
         <div className="parent-cont container">
-            <div className="child-cont">
-              <div><img src={iconOne} /></div>
-              <div>
-                <h4>5,000</h4>
-                <p>New Clients Joined us</p>
-              </div>
+          <div className="child-cont">
+          <div><i className="fa fa-user text-primary" style={{fontSize: "30px"}}></i></div>
+          <div>
+              <h4>5,000</h4>
+              <p>New Clients Joined us</p>
             </div>
-            <div className="child-cont">
-              <div><img src={iconTwo} alt="" srcset="" /></div>
-              <div>
-                <h4>80M</h4>
-                <p>New Clients Joined us</p>
-              </div>
+          </div>
+          <div className="child-cont">
+            <div><i className="fa fa-users text-primary" style={{fontSize: "30px"}}></i></div>
+            <div>
+              <h4>15</h4>
+              <p>our patners</p>
             </div>
-            <div className="child-cont">
-              <div><img src={iconThree} /></div>
-              <div>
+          </div>
+          <div className="child-cont">
+          <div><i className="fa fa-house text-primary" style={{fontSize: "30px"}}></i></div>
+          <div>
               <h4>3</h4>
-              <p>Business locaions in Cross River State</p>
-              </div>
+              <p>Branches in Cross River State</p>
             </div>
+          </div>
         </div>
       </section>
 
@@ -114,13 +143,20 @@ function HeroSection() {
           <p>We have partnered with nine payment Service Banks, which includes:  Asset Matrix MFB,  VFD MFB,  Errandpay.</p>
         </div>
 
-        <div className="rollers carousel-container">
-          <div className="carousel-wrapper">
-            <img src={logo1} className="logos" />
-            <img src={logo2} className="logos"/>
-            <img src={logo3} className="logos" id="assest"  />
-            <img src={logo4} className="logos" />
-            <img src={logo5} className="logos" />
+        <div id="logoCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div className="carousel-inner">
+            {logos.map((_, index) => (
+              <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
+                <div className="d-flex justify-content-center">
+                  {[0, 1, 2, 3].map((offset) => {
+                    const logoIndex = (index + offset) % logos.length;
+                    return (
+                      <img key={logoIndex} src={logos[logoIndex]} className="logos mx-2" alt={`Logo ${logoIndex + 1}`} />
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -142,7 +178,7 @@ function HeroSection() {
         </div>
       </section>
 
-      <Footer description = "BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. Its headquarters are located at 111 Calabar Road, Calabar South LGA, Cross River State." />
+      <Footer description="BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. An upgraded liscence to best global payment, head office located at 111 calabar road, calabar south, LGA Cross river state." />
       <BackToTop />
     </>
   )

@@ -118,6 +118,7 @@ export const Button = styled.button`
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
+  width: 50%;
   padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -177,11 +178,11 @@ export const Overlay = styled.div`
 export const OverlayPanel = styled.div`
   position: absolute;
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
-  text-align: center;
+  // text-align: center;
   top: 0;
   height: 100%;
   width: 50%;
@@ -215,6 +216,31 @@ function Signup() {
     <>
       <Header />
       <Container>
+        <OverlayContainer signingIn={signIn}>
+          <Overlay signingIn={signIn}>
+            <LeftOverlayPanel signingIn={signIn}>
+              <Title>Welcome to Best Global Payment Institute Micro-finance </Title>
+              <Paragraph>Enter your details to start your journey!</Paragraph>
+              <Button onClick={() => setSignIn(true)}>Sign In</Button>
+            </LeftOverlayPanel>
+            <RightOverlayPanel signingIn={signIn}>
+              <Title>Welcome back to Best Global Payment Institute Micro-finance</Title>
+              <Paragraph>To keep connected with us, please log in!</Paragraph>
+              <Button onClick={() => setSignIn(false)}>Sign Up</Button>
+            </RightOverlayPanel>
+          </Overlay>
+        </OverlayContainer>
+        <SignInContainer signingIn={signIn}>
+          <Form>
+            <Title>Sign in</Title>
+            <Input type="email" placeholder="Email" />
+            <Input type="password" placeholder="Password" />
+            <Button>Sign In</Button>
+            <MobileToggleLink onClick={() => setSignIn(false)}>
+              Don't have an account? Sign Up
+            </MobileToggleLink>
+          </Form>
+        </SignInContainer>
         <SignUpContainer signingIn={signIn}>
           <Form>
             <Title>Create Account</Title>
@@ -227,31 +253,7 @@ function Signup() {
             </MobileToggleLink>
           </Form>
         </SignUpContainer>
-        <SignInContainer signingIn={signIn}>
-          <Form>
-            <Title>Sign in</Title>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <Button>Sign In</Button>
-            <MobileToggleLink onClick={() => setSignIn(false)}>
-              Don't have an account? Sign Up
-            </MobileToggleLink>
-          </Form>
-        </SignInContainer>
-        <OverlayContainer signingIn={signIn}>
-          <Overlay signingIn={signIn}>
-            <LeftOverlayPanel signingIn={signIn}>
-              <Title>Welcome Back!</Title>
-              <Paragraph>To keep connected with us, please log in!</Paragraph>
-              <Button onClick={() => setSignIn(true)}>Sign In</Button>
-            </LeftOverlayPanel>
-            <RightOverlayPanel signingIn={signIn}>
-              <Title>Hello, Friend!</Title>
-              <Paragraph>Enter your details to start your journey!</Paragraph>
-              <Button onClick={() => setSignIn(false)}>Sign Up</Button>
-            </RightOverlayPanel>
-          </Overlay>
-        </OverlayContainer>
+        
       </Container>
     </>
   );

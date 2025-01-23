@@ -8,7 +8,7 @@ function Footer(props) {
             <div className="firstBar row container-fluid">
                 <div className="footerAbout col-lg-5">
                     {/* <img src={logo} className="moniepoint"/> */}
-                    <a href="#" style={{color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px"}}>BGP Micro-finance</a>
+                    <a href="#" style={{color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px"}}>BGP Micro-finance Institute</a>
                     <p id="description" style={{marginTop: "15px"}}>
                         {props.description}
                     </p>
@@ -30,29 +30,20 @@ function Footer(props) {
                     </div>
                 </div>
                 <ul className="col-lg-2 links">
-                    <li>Solutions</li>
-                    <li>Credit</li>
-                    <li>Payments</li>
-                    <li>Banking</li>
-                    <li>Business management</li>
+                    <li><a href="#" className="nav-link">Solutions</a></li>
+                    <li><a href="#" className="nav-link">Loan</a></li>
+                    <li><a href="#" className="nav-link">Business management</a></li>
                 </ul>
                 <ul className="col-lg-2 links">
-                    <li>About us</li>
-                    <li>Culture</li>
-                    <li>Solutions</li>
-                    <li>Credit</li>
-                    <li>Banking</li>
-                    <li>Payments</li>
+                    <li><a href="#" className="nav-link">About us</a></li>
+                    <li><a href="#" className="nav-link">Resources</a></li>
+                    <li><a href="#" className="nav-link">Contact us</a></li>
                 </ul>
                 <ul className="col-lg-3 links">
-                    <li>Resources</li>
-                    <li>About us</li>
-                    <li>Culture</li>
-                    <li>Solutions</li>
-                    <li>Credit</li>
-                    <li>Payments</li>
-                    <li>Banking</li>
-                    <li>IMC Policy</li>
+               
+                    <li><a href="#" className="nav-link">Payments</a></li>
+                    <li><a href="#" className="nav-link">Banking</a></li>
+                    <li><a href="#" className="nav-link">Privacy Policy</a> </li>
                 </ul>
             </div>
         </footer>
