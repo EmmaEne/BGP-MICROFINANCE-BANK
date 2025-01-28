@@ -679,14 +679,11 @@ button.btn-close {
 
 
 .intro {
-    background: url("/images/wallpaper2.jpg") no-repeat;
-    padding-top: 160px;
-    background-size: cover;
-    background-position: center;
     display: flex;
-    text-shadow: 1px 1px 1px white;
     width: 100%;
-    height: 93vh;
+    height: 96vh;
+    color: white;
+    background-color: #011339;
 }
 
 @media only screen and (max-width: 610px) {
@@ -719,11 +716,15 @@ button.btn-close {
 }
 
 .others {
-    height: 35%;
-    background-color: #2c4a8c;
+    /* height: 35%; */
+    background-color: #e8efff;
     display: flex !important;
     justify-content: center;
     gap: 35px;
+}
+
+.others div {
+    background-color: #2c4a8c;
 }
 
 
@@ -852,4 +853,10 @@ button {
 .submit {
     float: right;
     margin-top: 50px !important;
+}
+
+.carousel-indicators button {
+    width: 20px !important;
+    height: 0px !important;
+    border-radius: 100% !important;
 }

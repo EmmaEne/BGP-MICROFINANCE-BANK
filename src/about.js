@@ -27,7 +27,6 @@ const data = [
         id: 3,
         title: 'BEST INVESTMENT',
         description: [
-            "Loan with easy payment structure",
             "Invest and earn financial increase 20-30% P/A",
             "Sales and leasing of POS machine"
         ],
@@ -38,24 +37,25 @@ const data = [
         id: 4,
         title: 'BEST LOAN',
         description: [
-            "Business financial support",
             "Flexible repayment",
-            "Quick approval"
+            "Quick approval",
+            "Loan with easy payment structure",
+            "Business financial support"
         ],
         className: "second-level col-lg-4",
         image: "/images/wallpaper3.jpg",
     }, 
-    {
-        id: 4,
-        title: 'BEST LOAN',
-        description: [
-            "Business financial support",
-            "Flexible repayment",
-            "Quick approval"
-        ],
-        className: "second-level col-lg-4",
-        image: "/images/wallpaper3.jpg",
-    }
+    // {
+    //     id: 4,
+    //     title: 'BEST LOAN',
+    //     description: [
+    //         "Business financial support",
+    //         "Flexible repayment",
+    //         "Quick approval"
+    //     ],
+    //     className: "second-level col-lg-4",
+    //     image: "/images/wallpaper3.jpg",
+    // }
 ];
 
 export default data;

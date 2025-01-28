@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../component/Header";
 
-import "../signup.css"
-
 
 export const Container = styled.div`
   background-color: #fff;
@@ -219,12 +217,12 @@ function Signup() {
         <OverlayContainer signingIn={signIn}>
           <Overlay signingIn={signIn}>
             <LeftOverlayPanel signingIn={signIn}>
-              <Title>Welcome to Best Global Payment Institute Micro-finance </Title>
+              <Title>Welcome to BGP MFI </Title>
               <Paragraph>Enter your details to start your journey!</Paragraph>
               <Button onClick={() => setSignIn(true)}>Sign In</Button>
             </LeftOverlayPanel>
             <RightOverlayPanel signingIn={signIn}>
-              <Title>Welcome back to Best Global Payment Institute Micro-finance</Title>
+              <Title>Welcome back to Best Global Payment Institute</Title>
               <Paragraph>To keep connected with us, please log in!</Paragraph>
               <Button onClick={() => setSignIn(false)}>Sign Up</Button>
             </RightOverlayPanel>

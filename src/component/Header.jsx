@@ -8,11 +8,11 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark fixed-top pe-5 ps-5">
       <div className="container-fluid mycontainer">
-        <a 
-         href="#"
-         onClick={() => navigate("/")}
-         className="navbar-brand">BGP Micro-finance</a>
-      
+        <a
+          href="#"
+          onClick={() => navigate("/")}
+          className="navbar-brand">BGP Micro-finance</a>
+
         {/* Offcanvas Toggle Button (Visible on Mobile) */}
         <button
           className="navbar-toggler"
@@ -23,7 +23,7 @@ function Header() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-      
+
         {/* Standard Navbar (Visible on Desktop Only) */}
         <ul className="navbar-nav desktop">
           <li className="nav-item dropdown">
@@ -31,14 +31,16 @@ function Header() {
               Solution
             </a>
             <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Link</a></li>
-              <li><a className="dropdown-item" href="#">Another link</a></li>
-              <li><a className="dropdown-item" href="#">A third link</a></li>
+              <li><a className="dropdown-item" href="#">Digital Banking</a></li>
+              <li><a className="dropdown-item" href="#">Payment Gateway</a></li>
+              <li><a className="dropdown-item" href="#">Agency Banking Network</a></li>
+              <li><a className="dropdown-item" href="#"> Framed Corporate Banking</a></li>
+              <li><a className="dropdown-item" href="#"> Sales and Leasing of POS Terminals.</a></li>
             </ul>
           </li>
-          <li className="nav-item dropdown">
+          <li className="nav-item">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link"
               onClick={() => navigate("/about")}
               role="button"
             >
@@ -47,7 +49,7 @@ function Header() {
           </li>
           <li className="nav-item">
             <a className="nav-link" onClick={() => navigate("/contact")}>Contact</a>
-            </li>
+          </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               Resources
@@ -59,14 +61,14 @@ function Header() {
             </ul>
           </li>
         </ul>
-      
+
         {/* Signup Button (Visible on Desktop Only) */}
         <div className="d-none d-sm-block">
           <button className="btn sign" onClick={() => navigate("/signup")}>
             Sign up
           </button>
         </div>
-      
+
         {/* Offcanvas Navigation (Hidden by Default for All Screen Sizes) */}
         <div
           className="offcanvas offcanvas-end"
@@ -90,9 +92,11 @@ function Header() {
                   Solution
                 </a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Link</a></li>
-                  <li><a className="dropdown-item" href="#">Another link</a></li>
-                  <li><a className="dropdown-item" href="#">A third link</a></li>
+                  <li><a className="dropdown-item" href="#">Digital Banking</a></li>
+                  <li><a className="dropdown-item" href="#">Payment Gateway</a></li>
+                  <li><a className="dropdown-item" href="#">Agency Banking Network</a></li>
+                  <li><a className="dropdown-item" href="#"> Framed Corporate Banking</a></li>
+                  <li><a className="dropdown-item" href="#"> Sales and Leasing of POS Terminals.</a></li>
                 </ul>
               </li>
               <li className="nav-item">

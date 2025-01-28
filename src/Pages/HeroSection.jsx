@@ -9,11 +9,14 @@ import logo2 from "/images/ammfib-removebg-preview.png"
 import logo3 from "/images/fcmb-removebg-preview.png"
 import logo4 from "/images/vfd_mfi_b-removebg-preview.png"
 import logo5 from "/images/wirelesspay-removebg-preview.png"
+import logo6 from "/images/errandpay-logos.png"
 import pos from "/images/diverse-business-group-working-laptop.jpg"
 import dreamMaker from "/images/black-men-cafe-having-business.jpg"
 import feat from "/images/model4-removebg-preview.png"
 import model2 from "/images/model2-removebg-preview.png"
 import festivalModels from "/images/model1-removebg-preview.png"
+import posMachine from "/images/pos machine.png"
+import model3 from "/images/model3-removebg-preview.png"
 
 // importing fonts
 import rightarrow from "/icons/arrow-right.svg"
@@ -30,7 +33,7 @@ const carouselItems = [
     image: feat,
   },
   {
-    title: "Bank smarter with innovative solutions.",
+    title: "Bank smarter with Best innovative solutions.",
     text: "Experience seamless transactions and financial growth with our cutting-edge banking technology.",
     image: model2,
   },
@@ -38,18 +41,29 @@ const carouselItems = [
     title: "Your future, your finances, our priority.",
     text: "We are committed to providing financial solutions that secure your tomorrow, today.",
     image: festivalModels,
+  },
+  {
+    title: "Loan with easy payment structure",
+    text: "We’ve made loans easily accessible to you to help you reach your goals and stay in control. Unlock higher loan amounts by transacting with your account  on Mobile App, USSD, Internet Banking and others of our banking channels.",
+    image: model3,
   }
 ];
 
 
-const logos = [logo1, logo2, logo3, logo4, logo5];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 function HeroSection() {
   return (
     <>
       <Header />
       <section className="hero-section">
-        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="demo" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+          </div>
           <div className="carousel-inner">
             {carouselItems.map((item, index) => (
               <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
@@ -60,7 +74,7 @@ function HeroSection() {
                     </div>
                     <h1>{item.title}</h1>
                     <p>{item.text}</p>
-                    <button className="btn btn-lg btn-primary rounded-pill" style={{width:"170px", height: "50px"}}>Join us</button>
+                    <button className="btn btn-lg btn-primary rounded-pill" style={{ width: "170px", height: "50px" }}>Join us</button>
                   </div>
                   <div className="image col-lg-6">
                     <div className="imagebox">
@@ -100,7 +114,6 @@ function HeroSection() {
                     ))}
                   </ul>
                   {item.link ? <a href="#" className="btn btn-primary">{item.link}</a> : ""}
-
                 </div>
               </div>
             </div>
@@ -114,22 +127,22 @@ function HeroSection() {
         <h1>Trusted by <span>2,000+</span> businesses</h1>
         <div className="parent-cont container">
           <div className="child-cont">
-          <div><i className="fa fa-user text-primary" style={{fontSize: "30px"}}></i></div>
-          <div>
+            <div><i className="fa fa-user text-primary" style={{ fontSize: "30px" }}></i></div>
+            <div>
               <h4>5,000</h4>
               <p>New Clients Joined us</p>
             </div>
           </div>
           <div className="child-cont">
-            <div><i className="fa fa-users text-primary" style={{fontSize: "30px"}}></i></div>
+            <div><i className="fa fa-users text-primary" style={{ fontSize: "30px" }}></i></div>
             <div>
               <h4>15</h4>
-              <p>our patners</p>
+              <p>our partners</p>
             </div>
           </div>
           <div className="child-cont">
-          <div><i className="fa fa-house text-primary" style={{fontSize: "30px"}}></i></div>
-          <div>
+            <div><i className="fa fa-house text-primary" style={{ fontSize: "30px" }}></i></div>
+            <div>
               <h4>3</h4>
               <p>Branches in Cross River State</p>
             </div>
@@ -138,9 +151,8 @@ function HeroSection() {
       </section>
 
       <section className="investors trusted container">
-        <div className="start">
+        <div className="start mb-4">
           <h4>Our Partners</h4>
-          <p>We have partnered with nine payment Service Banks, which includes:  Asset Matrix MFB,  VFD MFB,  Errandpay.</p>
         </div>
 
         <div id="logoCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
@@ -148,7 +160,7 @@ function HeroSection() {
             {logos.map((_, index) => (
               <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
                 <div className="d-flex justify-content-center">
-                  {[0, 1, 2, 3].map((offset) => {
+                  {[0, 1, 2, 3, 4, 5].map((offset) => {
                     const logoIndex = (index + offset) % logos.length;
                     return (
                       <img key={logoIndex} src={logos[logoIndex]} className="logos mx-2" alt={`Logo ${logoIndex + 1}`} />
