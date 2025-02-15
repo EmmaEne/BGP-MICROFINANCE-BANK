@@ -47,14 +47,14 @@ function About() {
     </section>
 
     <section className="row container-fluid m-auto">
-      <div className="col-lg-6 d-flex flex-column justify-content-center p-5" style={{ background: "white" }}>
+      <div className="col-lg-6 d-flex flex-column justify-content-center" style={{ background: "white", padding: "25px" }}>
         <h3>We offer loans with easy payment structure</h3>
         <p>We’ve made loans easily accessible to you to help you reach your goals and stay in control. Unlock higher loan amounts by transacting with your account  on Mobile App, USSD, Internet Banking and others of our banking channels.</p>
         <button className="btn w-50">Start now</button>
       </div>
-      <div className="col-lg-6 d-flex justify-content-center" style={{ background: "#0e46bf" }}>
+      <div className="col-lg-6 d-flex justify-content-center approve" style={{ background: "#0e46bf" }}>
         <img src="/images/approved2-removebg-preview.png" alt="" />
-      </div>
+      </div>  
     </section>
 
     <section className="row container-fluid m-auto" style={{ background: "#b3caff" }}>
@@ -73,7 +73,7 @@ function About() {
           <li className="nav-link">Beep Alert Notification on transactions</li>
           <li className="nav-link">EOD reports for easier reconciliation</li>
         </ul>
-        <button className="btn w-50 btn-primary">Request now</button>
+        <button className="btn btn-primary request">Request now</button>
       </div>
     </section>
     <Footer description="BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. An upgraded liscence to best global payment, head office located at 111 calabar road, calabar south, LGA Cross river state." />

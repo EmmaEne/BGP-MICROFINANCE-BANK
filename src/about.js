@@ -45,17 +45,18 @@ const data = [
         className: "second-level col-lg-4",
         image: "/images/wallpaper3.jpg",
     }, 
-    // {
-    //     id: 4,
-    //     title: 'BEST LOAN',
-    //     description: [
-    //         "Business financial support",
-    //         "Flexible repayment",
-    //         "Quick approval"
-    //     ],
-    //     className: "second-level col-lg-4",
-    //     image: "/images/wallpaper3.jpg",
-    // }
+    {
+        id: 5,
+        title: 'OTHER SERVICES',
+        description: [
+            "BEST fixed deposit account",
+            "BEST agency banking",
+            "BEST corperate savings",
+            "BEST kids savings"
+        ],
+        className: "second-level col-lg-4",
+        image: "/images/wallpaper3.jpg",
+    }
 ];
 
 export default data;

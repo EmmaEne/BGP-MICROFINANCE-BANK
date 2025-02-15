@@ -1,6 +1,8 @@
-import logo from "/images/logo-icon-white.svg"
 import apple from "/images/apple.svg"
 import playstore from "/images/playstore.svg"
+import { Link } from "react-router-dom";
+
+
 
 function Footer(props) {
     return <>
@@ -8,42 +10,45 @@ function Footer(props) {
             <div className="firstBar row container-fluid">
                 <div className="footerAbout col-lg-5">
                     {/* <img src={logo} className="moniepoint"/> */}
-                    <a href="#" style={{color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px"}}>BGP Micro-finance Institute</a>
-                    <p id="description" style={{marginTop: "15px"}}>
+                    <a href="#" style={{ color: "white", textDecoration: "none", fontWeight: "bold", fontSize: "23px" }}>BGP Micro-finance Institute</a>
+                    <p id="description" style={{ marginTop: "15px" }}>
                         {props.description}
                     </p>
                     <div className="download">
                         <div className="apple">
-                            <img src={apple} />
-                            <div className="getIt">
-                                <p>Get it on</p>
-                                <h5>Apple</h5>
-                            </div>
-                        </div> 
+                            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" className="nav-link">
+                                <img src={apple} alt="Apple Store" />
+                                <div className="getIt">
+                                    <p>Get it on</p>
+                                    <h6>Apple</h6>
+                                </div>
+                            </a>
+                        </div>
                         <div className="playstore">
-                            <img src={playstore} />
-                            <div className="getIt">
-                                <p>Get it on</p>
-                                <h5>Playstore</h5>
-                            </div>
+                            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="nav-link">
+                                <img src={playstore} alt="Google Play Store" />
+                                <div className="getIt">
+                                    <p>Get it on</p>
+                                    <h6>Playstore</h6>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <ul className="col-lg-2 links">
-                    <li><a href="#" className="nav-link">Solutions</a></li>
-                    <li><a href="#" className="nav-link">Loan</a></li>
-                    <li><a href="#" className="nav-link">Business management</a></li>
+                    <li><Link to="/" className="nav-link">Solutions</Link></li>
+                    <li><Link to="/banking" className="nav-link">Loan</Link></li>
+                    <li><Link to="/BusinessManagement" className="nav-link">Business Management</Link></li>
                 </ul>
                 <ul className="col-lg-2 links">
-                    <li><a href="#" className="nav-link">About us</a></li>
-                    <li><a href="#" className="nav-link">Resources</a></li>
-                    <li><a href="#" className="nav-link">Contact us</a></li>
+                    <li><Link to="/about" className="nav-link">About Us</Link></li>
+                    <li><Link to="/resources" className="nav-link">Resources</Link></li>
+                    <li><Link to="/contact" className="nav-link">Contact Us</Link></li>
                 </ul>
                 <ul className="col-lg-3 links">
-               
-                    <li><a href="#" className="nav-link">Payments</a></li>
-                    <li><a href="#" className="nav-link">Banking</a></li>
-                    <li><a href="#" className="nav-link">Privacy Policy</a> </li>
+                    <li><Link to="/payments" className="nav-link">Payments</Link></li>
+                    <li><Link to="/banking" className="nav-link">Banking</Link></li>
+                    <li><Link to="/privacy-policy" className="nav-link">Privacy Policy</Link></li>
                 </ul>
             </div>
         </footer>

@@ -25,7 +25,9 @@
     --light-grey-100: #dcdfe6;
     --light-grey-10: #dcdfe638;
     --text-secondary: #8490aa; */
-
+* {
+    /* overflow: scroll !important; */
+}
 @font-face {
     font-family: Poppins-bold;
     src: url('/Poppins/Poppins-Bold.ttf');
@@ -75,7 +77,6 @@ nav {
 }
 
 button.sign {
-    width: 100px !important;
     border-radius: 100px !important;
 }
 
@@ -111,9 +112,10 @@ button:active {
     margin-bottom: 20px;
 }
 
-.hero-section,
+
 nav {
     background: #031335 !important;
+    padding: 30px !important;
 }
 
 .hero-section,
@@ -142,7 +144,7 @@ nav {
     height: 20px;
     text-align: center;
     padding: 10px;
-    background-color: rgba(223, 239, 255, 0.2);
+    background-color: rgba(81, 149, 216, 0.2);
     backdrop-filter: blur(60px);
 }
 
@@ -179,14 +181,14 @@ nav {
 }
 
 .image {
-    width: 50% !important;
+    /* width: 50% !important; */
     height: 500px !important;
-    position: relative;
+    /* position: relative; */
     /* top: 100px; */
 }
 
 .imagebox {
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: auto;
     /* border: 1px solid #0b51e8;
@@ -227,6 +229,10 @@ nav {
 .about-text p {
     width: 78%;
     margin-bottom: 10%;
+}
+
+.explanation {
+    width: 50% !important;
 }
 
 .wave-div {
@@ -353,7 +359,7 @@ nav {
 
 
 .join-us {
-    background: #0b51e8 !important;
+    background: #0944c3 !important;
     height: auto;
     display: flex;
     justify-content: center;
@@ -416,8 +422,7 @@ footer {
 .apple,
 .playstore {
     display: flex;
-    margin-left: 25px;
-    background: black;
+    
     width: 32%;
     padding-top: 1px;
 }
@@ -441,6 +446,10 @@ footer ul li {
     text-align: left;
 }
 
+.accordion {
+    width: 70%;
+}
+
 .navbar-toggler,
 button.btn-close {
     background: none !important;
@@ -449,6 +458,11 @@ button.btn-close {
 button.btn-close {
     color: #011339 !important;
     /* background-color: #011339 !important; */
+}
+
+.link {
+    text-decoration: none;
+    color: #011339 !important;
 }
 
 ::-webkit-scrollbar {
@@ -461,13 +475,26 @@ button.btn-close {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0e46bf;
+    background-color: #0d3998;
     border-radius: 15px;
     min-height: 10px !important;
     height: 10px !important;
 }
 
 @media screen and (max-width: 992px) {
+
+    h1 {
+        font-size: 50px !important;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    h3 {
+        font-size: 40px;
+    }   
+    p, span, a {
+        font-size: 25px;
+    }
 
     .desktop.navbar-nav,
     .signup {
@@ -478,19 +505,58 @@ button.btn-close {
         width: 75% !important;
     }
 
-    .hero-section h1,
+    .hero-section h1 {
+        width: 90% !important;
+    }
+
     .hero-section p {
-        width: 75%;
+        width: 70%;        
     }
 
     .hero-section {
-        height: 750px;
+        padding-bottom: 120px !important;
+        height: auto;
+    }
+
+    .first-level, .second-level {
+        margin-bottom: 20px;
+        height: auto !important;
+    }
+
+    .first-level .card, .second-level .card {
+        width: 100%;
+        height: 100% !important;
+    }
+
+    .second-level, .first-level {
+        width: 50% !important;
+    }
+
+    .first-level li, .second-level li {
+        font-size: 20px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    
+    .imagebox {
+        display: none;
     }
 
 
     .image {
         height: 500px !important;
         margin: auto;
+    }
+
+    .explanation {
+        width: 100% !important;
+    }
+
+    .about-text {
+        background: none;
     }
 
     .imagebox {
@@ -543,22 +609,39 @@ button.btn-close {
         text-align: center;
     }
 
+    .others {
+        padding: 0 !important;
+    }
+
+    .features {
+        border: solid !important;
+        width: 10px !important;
+    }
+
 }
 
 @media only screen and (max-width: 610px) {
+
+    h1 {
+        font-size: 30px !important;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }   
+    p, span, a,li {
+        font-size: 19px;
+    }
 
     .hero-section h1,
     .hero-section p {
         width: 100%;
     }
 
-    .rounded-pill {
-        /* border: solid; */
-        /* width: 100% !important; */
-    }
-
-    .hero-section {
-        height: 600px;
+    nav {
+        padding: 0 !important;
     }
 
     .about {
@@ -583,9 +666,25 @@ button.btn-close {
 
     .first-level {
         margin-bottom: 20px;
+        width: 100% !important;
+    }
+
+    .parent-cont {
+        border: 1px solid #769ef4;
+        padding-top: 20px !important;
+    }
+
+    .trusted span {
+        font-size: 35px;
+    }
+
+    .child-cont {
+        background-color: #d7f1ff;
+        border: 1px solid #769ef4;
     }
 
     .second-level {
+        width: 100% !important;
         margin-bottom: 20px;
     }
 
@@ -641,11 +740,65 @@ button.btn-close {
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .carousel-indicators {
+        margin-bottom: 0px !important;
+    }
+
+    .features {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px !important;
+        background: none !important;
+        background-color: #052577 !important;
+    }
+
+    .features h3, .features p {
+        color: white !important;
+    }
+
+    .features p {
+        width: 100%;
+    }
+
+    .approve img {
+        display: none !important;
+        border: solid;
+    }
+
+    .loan-section img {
+        display: none;
+    }
+
+    .btn.loan-btn {
+        width: 70% !important;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .download {
+        display: flex !important;
+    }
+
+    .download .apple, .download .playstore{
+        width: 50%;
+    }
+
+
+    
 }
 
 /* Hide the offcanvas by default on all screen sizes */
 .offcanvas {
     display: none !important;
+}
+
+.request {
+    width: 50%;
 }
 
 /* Show the offcanvas only on smaller screens (when the navbar-toggler button is clicked) */
@@ -701,6 +854,10 @@ button.btn-close {
         width: 400px !important;
     }
 
+    .others {
+        padding-top: 50px !important;
+    }
+
 }
 
 .intro>* {
@@ -733,7 +890,6 @@ button.btn-close {
     height: auto !important;
     background-color: #f5f9fc;
     border-radius: 15px;
-    padding-left: 30px !important;
 }
 
 .features p {
@@ -821,6 +977,7 @@ form h5 {
     .bottom {
         height: 530px;
     }
+
 }
 
 @media (max-width: 614px) {
@@ -860,3 +1017,18 @@ button {
     height: 0px !important;
     border-radius: 100% !important;
 }
+
+.apply:first-child {
+    background-color: #ffff;
+}
+
+.apply, div.apply {
+    height: 800px !important;
+}
+
+
+.carousel-item img {
+    width: 100%!important;
+    height: 790px !important;
+}
+

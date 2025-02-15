@@ -1,5 +1,6 @@
 import Header from "../component/Header"
 import BackToTop from "../component/BackToTop"
+import HeroCarousel from "../component/HeroCarousel"
 import data from "../about"
 
 // importing images
@@ -15,7 +16,6 @@ import dreamMaker from "/images/black-men-cafe-having-business.jpg"
 import feat from "/images/model4-removebg-preview.png"
 import model2 from "/images/model2-removebg-preview.png"
 import festivalModels from "/images/model1-removebg-preview.png"
-import posMachine from "/images/pos machine.png"
 import model3 from "/images/model3-removebg-preview.png"
 
 // importing fonts
@@ -46,7 +46,7 @@ const carouselItems = [
     title: "Loan with easy payment structure",
     text: "We’ve made loans easily accessible to you to help you reach your goals and stay in control. Unlock higher loan amounts by transacting with your account  on Mobile App, USSD, Internet Banking and others of our banking channels.",
     image: model3,
-  }
+  },
 ];
 
 
@@ -56,42 +56,16 @@ function HeroSection() {
   return (
     <>
       <Header />
-      <section className="hero-section">
-        <div id="demo" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-          </div>
-          <div className="carousel-inner">
-            {carouselItems.map((item, index) => (
-              <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={index}>
-                <div className="row align-items-center">
-                  <div className="text col-lg-6">
-                    <div className="rounded-pill"></div>
-                    <div className="rounded-pill" style={{ width: "40%" }}>
-                    </div>
-                    <h1>{item.title}</h1>
-                    <p>{item.text}</p>
-                    <button className="btn btn-lg btn-primary rounded-pill" style={{ width: "170px", height: "50px" }}>Join us</button>
-                  </div>
-                  <div className="image col-lg-6">
-                    <div className="imagebox">
-                      <img src={item.image} className="d-block w-100" alt="Feature" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HeroCarousel
+        carouselItems={carouselItems}
+        style={{ background: "#031335", color: "#ecf2fe" }}
+      />
+
 
       <section className="about">
         <div className="about-text">
           <h3>About BGP Microfinance Bank</h3>
-          <p className="w-50">BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. An upgraded liscence to best global payment, head office located at 111 calabar road, calabar south, LGA Cross river state.</p>
+          <p className="explanation">BEST GLOBAL PAYMENT, a subsidiary of BEST MPCS LTD, was founded in Nigeria in 2008 as Best Savings Cooperative Society Limited. An upgraded liscence to best global payment, head office located at 111 calabar road, calabar south, LGA Cross river state.</p>
         </div>
         <div className="wave-div"></div>
       </section>

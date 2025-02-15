@@ -1,0 +1,49 @@
+.offers {
+    flex-wrap: wrap !important;
+}
+
+.first-level div.card, .second-level div.card{
+    height: 300px;
+}
+
+.loan-section {
+  background-color: #0c2f7a;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.loan-content {
+  max-width: 700px;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+.loan-section img {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(74, 73, 91), rgba(135, 135, 209, 0));
+  mask-image: linear-gradient(to bottom, rgb(38, 39, 45), rgba(31, 31, 30, 0));
+}
+
+.loan-content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.loan-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.loan-btn {
+  background-color: #f9c851;
+  color: #0c2f7a;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loan-btn:hover {
+  background-color: #f5b600;
+}
